@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<!--
+-   website-5 "Annapurna Bhojnalaya"
+-   Copyright by https://github.com/MayankDevil/
+-   Developed by Mayank
+-   HTML : ./index.html
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--
+        ---------
+        | style |
+        ---------
+    -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+    <!--
+        ------------------
+        | main container |
+        ------------------
+    -->
+    <main id="main">
+
+        <!--
+            ==================
+            [ header section ]-------------------------------------------------
+            ==================
+        -->
+        <header id="header">
+            <div class="container">
+                <!-- menu button -->
+				<button id="menu_btn"> &#9776; </button>
+				<!-- menu section -->
+				<nav id="nav">
+	
+					<a href="#home"> Home </a>
+					<a href="#facts"> About </a>
+					<a href="#menu"> Menu </a>
+					<a href="#service"> Service </a>
+					<a href="#order"> Order </a>
+	
+				</nav>
+				
+            </div>
+        </header>
+        <!--
+            =========================
+            [ introducation section ]-------------------------------------------------
+            =========================
+        -->
+        <section id="home">
+            <div class="container">
+				<!-- main heading -->
+				<h1> Annapurna <!-- Bhojnalaya --> </h1>
+				<!-- subtitle heading -->
+				<h3> Welcome To Annapurna Bhojnalaya The Indian Restorant. Eat Good Feel Good </h3>
+				<!-- social media -->
+				<div id="social">
+					
+					<a href="#" class="media">
+						<span class="fa brands fa-facebook-f"></span>
+					</a>
+					<a href="#" class="media">
+						<span class="fa brands fa-instagram"></span>
+					</a>
+					<a href="#"	class="media">
+						<span class="fa brands fa-whatsapp"></span>
+					</a>
+
+				</div>
+				<!-- contact -->
+				<div id="contact">
+					<!-- email id -->
+					<a href="mailto:fake@gmail.com"> fake@gmail.com </a>
+					<!-- contact number -->
+					<a href="tel:+9211420420"> 9211-420-420</a>
+
+				</div>
+				
+			</div>
+        </section>
+        <!--
+            =================
+            [ about section ]-------------------------------------------------
+            =================
+        -->
+        <section id="about">
+            <div class="container">
+                <h2> About Bhojnalaya </h2>
+            </div>
+        </section>
+        <!--
+            ================
+            [ menu section ]-------------------------------------------------
+            ================
+        -->
+        <section id="menu">
+            <div class="container">
+            
+				<!-- food heading -->
+				<input type="search" id="search_fld" placeholder="Search Your Taste">
+			
+				<!-- food -->
+				<div id="food">
+
+					<script src="js/data.js"></script>
+
+				</div>
+
+			</div>
+		</section>
+        <!--
+            ===================
+            [ service section ]-------------------------------------------------
+            ===================
+        -->
+        <section id="service">
+	        <div class="container">
+			    <!-- service 1 -->
+			    <div class="serve">
+
+				    <h4> FOOD DELIVERY </h4>
+
+				    <img src="data/Delivery.jpg" alt="" class="pic">
+				    
+				    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis quaerat cupiditate ipsa rem quod dolor eaque eius voluptas, ut eligendi. </p>
+				    
+				    <div class="rating"> &starf; &starf; &starf; </div>
+				    
+				    <a href="#" class="more_btn"> Explore </a>
+
+			    </div>
+			    <!-- service 2 -->
+			    <div class="serve">
+
+				    <h4> EVENT PARTY </h4>
+
+				    <img src="data/Delivery.jpg" alt="" class="pic">
+				    
+				    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis quaerat cupiditate ipsa rem quod dolor eaque eius voluptas, ut eligendi. </p>
+				    
+				    <div class="rating"> &starf; &star; &star; </div>
+				    
+				    <a href="#" class="more_btn"> Explore </a>
+
+			    </div>
+			    <!-- service 3 -->
+			    <div class="serve">
+
+				    <h4> TIFUN LUNCH </h4>
+
+				    <img src="data/Delivery.jpg" alt="" class="pic">
+				    
+				    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis quaerat cupiditate ipsa rem quod dolor eaque eius voluptas, ut eligendi. </p>
+				    
+				    <div class="rating"> &starf; &starf; &star; </div>
+				    
+				    <a href="#" class="more_btn"> Explore </a>
+
+			    </div>
+
+		    </div>
+        </section>
+        <!--
+            =================
+            [ order section ]-------------------------------------------------
+            =================
+        -->
+        <section id="order">
+			<div class="container">
+			
+			    <!-- order form -->
+			    <form action="#" method="POST">
+				    <!-- heading -->
+				    <h6> Order Food Delivery Free </h6>
+				    <!-- name -->
+				    <div>
+					    
+					    <label> Enter Customer Name : </label>
+					    
+					    <input type="text" name="username" class="fld" placeholder="Name">
+
+				    </div>
+				    <!-- telephone -->
+				    <div>
+					    
+					    <label> Enter Contact Number : </label>
+					    
+					    <input type="tel" name="number" class="fld" placeholder="Phone">
+
+				    </div>
+				    <!-- email -->
+				    <div>
+					    
+					    <label> Enter Your Email Id : </label>
+					    
+					    <input type="email" name="email" class="fld" placeholder="Email">
+
+				    </div>
+				    <!-- date -->
+				    <div>
+					    
+					    <label> Enter Today Date : </label>
+					    
+					    <input type="date" name="date" class="fld">
+
+				    </div>
+				    <!-- time -->
+				    <div>
+					    
+					    <label> Enter Present Approx Time : </label>
+
+					    <input type="time" name="time" class="fld">
+
+				    </div>
+				    <!-- address -->
+				    <div>
+
+					    <label> Enter Delivery Address : </label>
+
+					    <input type="text" name="location" class="fld" placeholder="Location">
+
+				    </div>
+				    <!-- sumbit button -->
+				    <div>
+					    <input type="submit" value="Order Know" class="odr_btn">
+				    </div>
+
+			    </form>
+
+		    </div>
+        </section>
+        <!--
+            ==================
+            [ footer section ]-------------------------------------------------
+            ==================
+        -->
+        <footer id="footer">
+            <div class="container">
+                <!-- copyright -->
+                <div class="copy"> 2021 &copy; All Right Reserved | Desgined By <a href="https://github.com/MayankDevil/" target="_blank" title="MayankDevil">Mayank</a> </div>
+            
+            </div>
+        </footer>
+
+    </main>
+    <!--
+        ----------
+        | script |
+        ----------
+    -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
