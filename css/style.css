@@ -1,0 +1,548 @@
+/*
+-	Website 5 : Annapurna Bhojnalaya
+-   CopyRight | All right Reserved
+-   Designed by Mayank
+-   CSS : css/style
+*/
+/*
+    ------------------------
+    | FONTAWESOME ICON URL |
+    ------------------------
+*/
+@import url(fontawesome-all.min.css);
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700,300i,600i,700i|Raleway:600,800");
+/*
+    please import this url and add webfonts folder
+*/
+*
+{
+	user-select: none;
+	margin:0;
+	padding:0;
+	color:var(--black);
+	text-decoration: none;
+	font-family:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji";
+	border:none;
+	outline: none;
+	border: none;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+:root
+{
+    --orange:#fa8231;
+    --light-orange:#ffbe76;
+    --yellow:#f6e58d;
+    --white:#ffffff;
+    --light:#f8f9fa;
+    --black:#353b48;
+    --dark:#2f3640;
+    --gray:#6c757d;
+    --bg:linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background: var(--black);
+}
+::-webkit-scrollbar-thumb
+{
+	background: linear-gradient(to top, var(--secondary),var(--primary));
+}
+.fld::selection
+{
+	color:var(--black);
+	background: var(--shade);
+}
+::placeholder
+{
+    color:var(--primary);
+}
+
+.iconlist
+{
+    margin:5rem auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap:5rem;
+}
+
+/*
+    ------------------------
+    | FontAsesome Icon CSS |
+    ------------------------
+*/
+.fa
+{
+    margin: 0;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+/*
+    SOLID -------------------------------
+*/
+.fa.solid:before
+{
+    font-weight: 900;
+}
+/*
+    BRANDS ------------------------------
+*/
+.fa.brands:before
+{
+    font-family: 'Font Awesome 5 Brands';
+}
+/*
+    MAIN CSS -------------------------------
+*/
+body
+{
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
+}
+main
+{
+    width: 100%;
+    height: 100%;
+    display: grid;
+}
+section
+{
+    min-height: 100vh;
+}
+.container
+{
+    max-width:1000px;
+    margin:auto;
+}
+/*
+    HEADER CSS ----------------------------
+*/
+header
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    background: var(--bg);
+}
+#menu_btn
+{
+    display: none;
+    padding: 5px 10px;
+    background: transparent;
+    font-size:1.5rem;
+    color:var(--white);
+}
+#menu_btn:hover
+{
+    border:1px solid var(--dark);
+}
+nav a
+{
+    display: inline-block;
+    padding: 1rem;
+    letter-spacing: 1px;
+    font-size:1rem;
+    font-weight:bold;
+    color:var(--dark);
+    background: transparent;
+}
+nav a:hover
+{
+    color:var(--light);
+}
+/*
+    FOOTER CSS ----------------------------
+*/
+footer
+{
+    text-align: center;
+    background:var(--white);
+}
+footer .container
+{
+    border-top:1px solid var(--light-orange);
+}
+.copy
+{
+    padding:2rem 1rem;
+    font-size: 1rem;
+    color:var(--dark);
+}
+/*
+    HOME CSS ------------------------
+*/
+#home
+{
+    display: grid;
+    place-content: center;
+    text-align: center;
+    background: rgba(255,255,255,0.8) url('../data/bg.jpg') no-repeat fixed;
+    background-size: cover;
+    background-blend-mode:saturation;
+}
+h1
+{
+    padding: 2rem 1rem;
+    font-size: 5vw;
+    font-weight: normal;
+    color:var(--orange);
+}
+h1::after
+{
+    content: '';
+    //animation: Bhojnalaya 5s linear 1s infinite alternate;
+}
+/* animation frame Bhojnalaya */
+@keyframes Bhojnalaya
+{
+    10%{
+        content: 'B';
+    }
+    20%{
+        content: 'Bh';
+    }
+    30%{
+        content: 'Bho';
+    }
+    40%{
+        content: 'Bhoj';
+    }
+    50%{
+        content: 'Bhojn';
+    }
+    60%{
+        content: 'Bhojna';
+    }
+    70%{
+        content: 'Bhojnal';
+    }
+    80%{
+        content: 'Bhojnala';
+    }
+    90%{
+        content: 'Bhojnalay';
+    }
+    100%{
+        content: 'Bhojnalaya';
+    }
+}
+h3
+{
+    width: 70%;
+    margin: 1rem auto;
+    font-size:2rem;
+    font-weight: normal;
+    color:var(--gray);
+}
+#social
+{
+    margin:5rem auto;
+}
+#social .media
+{
+    display: inline-block;
+    margin:10px;
+    border-radius:10px;
+    background:var(--bg);
+}
+#social .media .fa
+{
+    padding:10px;
+}
+#social .media:hover 
+{
+    box-shadow: 0px 0px 10px var(--gray);
+}
+#contact a
+{
+    padding: 1rem;
+    letter-spacing:1px;
+    font-weight: normal;
+    font-size:1rem;
+    color:var(--black);
+}
+#contact a:hover
+{
+    color:var(--orange);
+}
+/*
+    FACTS CSS ------------------------
+*/
+#facts
+{
+    min-height:100px !important;
+    padding: 2rem;
+    padding-top: 10vh;
+    display: grid;
+    grid-gap:1rem;
+    grid-template-columns: repeat(4,1fr);
+    background: rgba(255,255,255,0.5);
+}
+.fact
+{
+    padding: 1rem;
+    text-align: center;
+    background: var(--light);
+    border:1px solid var(--light);
+}
+.counter
+{
+    padding: 1rem;
+    font-size: 5rem;
+    color:var(--dark);
+}
+.icon .fa
+{
+    color:var(--black);
+}
+.fact b
+{
+    font-size:1rem;
+    color:var(--white);
+}
+.fact:last-child b
+{
+    display: inline-block;
+    padding:1rem;
+    font-size: 1.2rem;
+}
+.fact:last-child > i
+{
+    display: block;
+    font-weight: bold;
+    font-size: 3rem;
+    color:var(--shade);
+}
+/*
+    MENU CSS -------------------------
+*/
+#menu
+{
+    display: grid;
+    min-height: 10vh;
+    background: rgba(255, 255, 255, 0.5);
+}
+.btn_grp > button:hover
+{
+    background: var(--black);
+}
+/* FOOD CSS */
+#food
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+#search_fld
+{
+    width: 100%;
+    margin: auto;
+    margin-top: 10vh;
+    padding:1rem;
+    text-align: center;
+    font-size:1rem;
+    color:var(--light-orange);
+    background: var(--black);
+    border-bottom: 1px solid var(--light);
+    border-radius:10px;
+}
+#search_fld:focus
+{
+    position: fixed;
+    z-index:3;
+    top:0;
+    left:0;
+    margin: 0 auto;
+    border-radius:0;
+}
+/* ITEM CSS */
+.item
+{
+    position: relative;
+    z-index: 0;
+    margin: 1rem auto;
+    padding:10px;
+    width: 300px;
+    height: auto;
+    background: var(--light);
+}
+.item:hover
+{
+    box-shadow:0 0 10px var(--gray);
+}
+.item .pic
+{
+    width: 100%;
+    height: 300px;
+    object-fit: fill;
+}
+.item .name::first-letter
+{
+    text-transform: capitalize;
+}
+.item .price
+{
+    order: 1;
+}
+.item .rating
+{
+    top:1%;
+    position:absolute;
+    color:var(--yellow);
+}
+ol
+{
+    display: flex;
+    justify-content: space-between;
+}
+li
+{
+    list-style: none;
+    padding: 0.5rem 1rem;
+    font-size:0.8;
+    color:var(--black);
+}
+/*
+    SERVICE CSS ----------------------
+*/
+#service
+{
+    display:grid;
+    width: 100%;
+}
+#service .container
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.serve
+{
+    padding: 1rem;
+    text-align: left;
+    background:var(--white);
+}
+.serve:not(:last-child)
+{
+    border-right:2px dotted var(--gray);
+}
+h4
+{
+    text-align: left;
+    font-weight: normal;
+    font-size: 20px;
+}
+p
+{
+    padding: 1rem;
+    font-size: 16px;
+    text-align: left;
+    line-height: 2rem;
+    word-spacing: 3px;
+    color:var(--shade);
+}
+.pic
+{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.rating
+{
+    padding: 0 1rem;
+    text-align: left;
+    font-size: 2rem;
+    color:var(--light);
+}
+.more_btn
+{
+    display: inline-block;
+    margin:auto 1rem;
+    padding:1rem;
+    text-align:center;
+    font-weight:bold;
+    color:var(--light);
+    background:var(--orange);
+    border-radius:5px;
+}
+.more_btn:hover
+{
+    opacity:0.7;
+    box-shadow: 0 0 10px var(--gray);
+}
+/*
+    ORDER CSS ------------------------
+*/
+#order
+{
+    display:grid;
+    background: var(--light);
+}
+form
+{
+    width: 800px;
+    padding: 1rem;
+    margin:10vh auto;
+    background:var(--white);
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--gray);
+}
+form > div
+{
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+}
+h6
+{
+    padding: 2rem 1rem;
+    text-align: left;
+    font-size: 1.5rem ;
+    color:var(--dark);
+}
+label
+{
+    font-weight: normal;
+    font-size: 1rem;
+    color:var(--black);
+}
+.fld
+{
+    width: 50%;
+    padding: 0.5rem;
+    text-align: left;
+    font-size: 1rem;
+    color:var(--dark);
+    border:2px solid var(--gray);
+    border-radius:10px;
+}
+.fld:focus
+{
+    border-color:var(--light-orange);
+}
+.odr_btn
+{
+    padding: 1rem 3rem;
+    font-weight:bold;
+    font-size:1rem;
+    color:var(--light);
+    background:var(--orange);
+    border-radius:5px;
+}
+.odr_btn:hover
+{
+    background:var(--light-orange);
+    box-shadow:0 0 10px var(--gray);
+}
+/*
+    THE END ==========================
+*/
+*/
