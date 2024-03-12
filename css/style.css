@@ -1,8 +1,8 @@
 /*
--	Website 5 : Annapurna Bhojnalaya
--   CopyRight | All right Reserved
--   Designed by Mayank
--   CSS : css/style
+-   website-5 "Annapurna Bhojnalaya"
+-   Copyright by https://github.com/MayankDevil/
+-   Developed by Mayank
+-   CSS : ./css/style.css
 */
 /*
     ------------------------
@@ -198,7 +198,7 @@ h1
 h1::after
 {
     content: '';
-    //animation: Bhojnalaya 5s linear 1s infinite alternate;
+    animation: Bhojnalaya 5s linear 1s infinite alternate;
 }
 /* animation frame Bhojnalaya */
 @keyframes Bhojnalaya
@@ -307,20 +307,15 @@ h3
     margin-top: 10vh;
     padding:1rem;
     text-align: center;
+    font-weight:bold;
     font-size:1rem;
-    color:var(--light-orange);
-    background: var(--black);
-    border-bottom: 1px solid var(--light);
+    color:var(--dark);
+    background: transparent;
+    border:1px solid var(--orange);
     border-radius:10px;
 }
 #search_fld:focus
 {
-    position: fixed;
-    z-index:3;
-    top:0;
-    left:0;
-    margin: 0 auto;
-    border-radius:0;
 }
 /* ITEM CSS */
 .item
@@ -379,15 +374,12 @@ li
 }
 #service .container
 {
-    display: flex;
-    flex-grow:1;
-    align-items: center;
-    justify-content: space-around;
+    display:flex;
 }
 .serve
 {
     position:relative;
-    padding: 1rem;
+    padding: 10px;
     text-align: left;
     background:var(--white);
 }

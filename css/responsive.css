@@ -16,64 +16,41 @@
 */
 @media (max-width: 992px)
 {
-    /* FACTS */
-    #facts
-    {
-        padding: 1rem;
-        padding-top: 10vh;
-        grid-template-columns: repeat(3,1fr);
-    }
-    .fact:last-child
-    {
-        grid-column: 1/-1;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-    }
     /* MENU */
     #food
     {
         grid-template-columns: repeat(2,1fr);   
     }
     /* SERVICE */
-    #service
+    #service .container
     {
-        padding-top:10vh;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        flex-wrap:wrap;
+    }
+    .serve
+    {
+        max-width:500px;
+        margin:2rem auto;
+    }
+    .serve:not(:last-child)
+    {
+        border:none;        
+    }
+    .serve_icon
+    {
+        font-size:6em;
     }
     /* ORDER */
     form
     {
-        display: grid;
-        width: 80%;
-        margin:10vh auto;
+        max-width:500px;
     }
-    .fld
-    {
-        width: 60%;
-    }
-}
-/*
-    768PX CSS -----------------------------
-*/
-@media (max-width: 768px)
-{
-    /* FACTS */
-    #facts
-    {
-        grid-template-columns: repeat(2,1fr);
-    }
-    .fact:last-child
-    {
-        grid-column: 2/-1;
-        display:grid;
-    }
-    /* ORDER */
     form > div
     {
         flex-wrap: wrap;
-        padding: 0.5rem 1rem;
+    }
+    .fld
+    {
+        width:100%;
     }
     label
     {
@@ -81,14 +58,12 @@
         text-align: left;
         width: 100%;
     }
-    .fld
-    {
-        width: 100%;
-    }
-    .odr_btn
-    {
-        margin-top:1rem;
-    }
+}
+/*
+    768PX CSS -----------------------------
+*/
+@media (max-width: 768px)
+{
 }
 /*
     576PX CSS -----------------------------
@@ -115,6 +90,7 @@
     nav a
     {
         text-align: left;
+        background:var(--bg);
     }
     /* HOME */
     #home
@@ -142,17 +118,6 @@
     {
         margin:3rem auto;
     }
-    /* FACTS */
-    #facts
-    {
-        padding:2rem;
-        padding-top: 10vh;
-        grid-template-columns: 1fr;
-    }
-    .fact:last-child
-    {
-        grid-column: 1/-1;
-    }
     /* ORDER */
     #food
     {
@@ -163,20 +128,25 @@
         width: 90%;
         margin:1rem auto;
     }
+    #search_fld
+    {
+        width:90%;
+        margin: 3rem 5%;
+    }
     /* SERVICE */
     #service
     {
         grid-template-columns: 1fr;
     }
-    .serve
-    {
-        width: 80%;
-        margin: 1rem auto ;
-    }
+    
     /* ORDER */
     form
     {
         width: 90%;
+    }
+    .odr_btn
+    {
+        width:100%;
     }
 }
 /*
@@ -193,11 +163,7 @@
     {
         display: block;
     }
-    /* FACTS */
-    #facts
-    {
-        padding:1rem 0.5rem;
-    }
+    
     /* SERVICE */
     .serve
     {
