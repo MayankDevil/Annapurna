@@ -240,7 +240,7 @@ h3
     margin: 1rem auto;
     font-size:2rem;
     font-weight: normal;
-    color:var(--gray);
+    color:var(--dark);
 }
 #social
 {
@@ -274,52 +274,11 @@ h3
     color:var(--orange);
 }
 /*
-    FACTS CSS ------------------------
+    ABOUT CSS -------------------------
 */
-#facts
+#about
 {
-    min-height:100px !important;
-    padding: 2rem;
-    padding-top: 10vh;
-    display: grid;
-    grid-gap:1rem;
-    grid-template-columns: repeat(4,1fr);
-    background: rgba(255,255,255,0.5);
-}
-.fact
-{
-    padding: 1rem;
-    text-align: center;
-    background: var(--light);
-    border:1px solid var(--light);
-}
-.counter
-{
-    padding: 1rem;
-    font-size: 5rem;
-    color:var(--dark);
-}
-.icon .fa
-{
-    color:var(--black);
-}
-.fact b
-{
-    font-size:1rem;
-    color:var(--white);
-}
-.fact:last-child b
-{
-    display: inline-block;
-    padding:1rem;
-    font-size: 1.2rem;
-}
-.fact:last-child > i
-{
-    display: block;
-    font-weight: bold;
-    font-size: 3rem;
-    color:var(--shade);
+    display:none;
 }
 /*
     MENU CSS -------------------------
@@ -421,11 +380,13 @@ li
 #service .container
 {
     display: flex;
+    flex-grow:1;
     align-items: center;
     justify-content: space-around;
 }
 .serve
 {
+    position:relative;
     padding: 1rem;
     text-align: left;
     background:var(--white);
@@ -434,11 +395,21 @@ li
 {
     border-right:2px dotted var(--gray);
 }
+.serve_icon
+{
+    display:block;
+    margin:1rem;
+    text-align:center;
+    font-size:5em;
+    color:var(--gray);
+}
 h4
 {
-    text-align: left;
+    padding:1rem;
+    line-height:2.5rem;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 1.2rem;
+    color:var(--black);
 }
 p
 {
@@ -457,13 +428,16 @@ p
 }
 .rating
 {
-    padding: 0 1rem;
+    padding:1rem;
     text-align: left;
     font-size: 2rem;
-    color:var(--light);
+    color:var(--yellow);
 }
 .more_btn
 {
+    position:absolute;
+    bottom:1rem;
+    right:2rem;
     display: inline-block;
     margin:auto 1rem;
     padding:1rem;
