@@ -1,13 +1,11 @@
 /*
-	Website 5 Annapurna Bhojnalaya
-    All right reserved by Mayank
-    JavaScript: js/script.css
+-   website-5 "Annapurna Bhojnalaya"
+-   Copyright by https://github.com/MayankDevil/
+-   Developed by Mayank
+-   JavaScript : ./js/data.js
 */
 try
 {
-    /*
-        API data
-    */
     var food_data = [
         {
             image : 'food/sabji.jpeg',
@@ -189,163 +187,57 @@ try
             type : 'health',
             nature : 'eat',
             taste : 'salty'
-        },
-        /* drinks */
-        {
-            image : 'drink/icecream.jpeg',
-            name : 'icecream',
-            price : 15,
-            star : 3,
-            type : 'healthy',
-            nature : 'liquid',
-            taste : 'dray'
-        },
-        {
-            image : 'drink/strawberry_shake.jpeg',
-            name : 'straberry shake',
-            price : 50,
-            star : 3,
-            type : 'healthy',
-            nature : 'liquid',
-            taste : 'dray'
-        },
-        {
-            image : 'drink/poodina_jucie.jpeg',
-            name : 'poodina jucie',
-            price : 20,
-            star : 1,
-            type : 'healthy',
-            nature : 'liquid',
-            taste : 'dray'
-        },
-        {
-            image : 'drink/pomegranate_jucie.jpeg',
-            name : 'pomepranate jucie',
-            price : 40,
-            star : 3,
-            type : 'healthy',
-            nature : 'liquid',
-            taste : 'dray'
-        },
-        {
-            image : 'drink/pinapple_jucie.jpeg',
-            name : 'pinapple_jucie',
-            price : 40,
-            star : 3,
-            type : 'healthy',
-            nature : 'liquid',
-            taste : 'dray'
-        },
-        {
-            image : 'drink/pappy_shake.jpeg',
-            name : 'pappy shake',
-            price : 35,
-            star : 3,
-            type : 'healthy',
-            nature : 'liquid',
-            taste : 'dray'
-        },
-        {
-            image : 'drink/orange_jucie.jpeg',
-            name : 'orange jucie',
-            price : 20,
-            star : 1,
-            type : 'healthy',
-            nature : 'liquid',
-            taste : 'dray'
-        },
-        {
-            image : 'drink/mango_shake.jpeg',
-            name : 'mango shake',
-            price : 30,
-            star : 3,
-            type : 'healthy',
-            nature : 'liquid',
-            taste : 'dray'
-        },
-        {
-            image : 'drink/lemon_jucie.jpeg',
-            name : 'lemon jucie',
-            price : 30,
-            star : 3,
-            type : 'healthy',
-            nature : 'liquid',
-            taste : 'dray'
-        },
-        {
-            image : 'drink/lemon_tea.jpeg',
-            name : 'lemon tea',
-            price : 30,
-            star : 3,
-            type : 'healthy',
-            nature : 'liquid',
-            taste : 'dray'
-        },
-        {
-            image : 'drink/cold_coffie.jpeg',
-            name : 'cold coffie',
-            price : 30,
-            star : 3,
-            type : 'healthy',
-            nature : 'liquid',
-            taste : 'dray'
-        },
-        {
-            image : 'drink/cream_coffie.jpeg',
-            name : 'cream coffie',
-            price : 40,
-            star : 2,
-            type : 'healthy',
-            nature : 'liquid',
-            taste : 'dray'
-        },
-        {
-            image : 'drink/hot_coffee.jpeg',
-            name : 'hot coffee',
-            price : 20,
-            star : 2,
-            type : 'unhealth',
-            nature : 'liquid',
-            taste : 'dray'
         }
-    ];
+    ]
+    
     /*
-        start rating function
+        -------------------------------------------------------------
+        | setStar function return number as number pass in argument |
+        -------------------------------------------------------------
     */
-    function set_star(s)
+    function setStar(s)
     {
         var star = '';
-        for (let i = 0; i < 3; i++)
-            star += (i < s)? '&starf;' : '&star;';
-        return star;
+        for (let i = 0; i < 3; i++) star += (i < s)? '&starf;' : '&star;';
+        return star
     }
     /*
-        data assamble to return function
+        ----------------------
+        | return item layout |
+        ----------------------
     */
-    function display(f)
+    function layout(data)
     {
-        return (
-            "<!-- item -->"+
-            "<div class='item'>"+
-                "<!-- item picture -->"+
-                "<img src='data/"+f.image+"' alt='sabji' class='pic'>"+
-                "<!-- item detail -->"+
-                "<ol class='detail'>"+
-                    "<li class='name'> "+f.name+" </li>"+
-                    "<li class='price'> &#8360; "+f.price+" </li>"+
-                    "<li class='rating'> "+set_star(f.star)+" </li>"+
-                "</ol>"+
-            "</div>"
-        );
+        return (`
+            <div class="item">
+                
+                <img src="data/${data.image}" alt='sabji' class='pic'>
+                
+                <ol class="detail">
+                    <li class='name'> ${ data.name } </li>
+                    <li class='price'> &#8360; ${ data.price } </li>
+                    <li class='rating'> ${ setStar(data.star) } </li>
+                </ol>
+                
+            </div>
+        `)
     }
     /*
-        display to select function
-    */ 
+        ----------------------------------------
+        | looped to set element data in layout |
+        ----------------------------------------
+    */
+    
+    //let food = document.getElementById('food')
+    
+    let list = document.getElementsByClassName("item")
+    
     for (let i = 0; i < food_data.length; i++)
     {
-        document.write(display(food_data[i]));
     
-        document.getElementsByClassName('item')[i].onclick = function()
+        document.write(layout(food_data[i]))
+    
+        list[i].onclick = function()
         {
             var selected = confirm(
                 "\n item name : "+food_data[i].name+
@@ -355,12 +247,14 @@ try
                 "\n item nature : "+food_data[i].nature+
                 "\n item taste : "+food_data[i].taste+
                 "\n\n PRESS [OK] for Select :)"
-            );
+            )
+            
             if(selected) this.style.opacity = '0.5'; else this.style.opacity = '1.0';
         }
     }
+    
 }
 catch (error)
 {
-    alert(error);    
+    console.log("\n_[data error]\n")  
 }
